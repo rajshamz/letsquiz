@@ -16,9 +16,9 @@ pipeline {
         stage('Deploy to Docker Desktop') {
             steps {
                 script {
-                    sh 'docker stop quiz-app || true'
-                    sh 'docker rm quiz-app || true'
-                    sh 'docker run --name quizapp -d -p 8099:80 quiz-app:latest'
+                    sh 'docker stop quizapp || true'
+                    sh 'docker rm quizapp || true'
+                    sh 'docker run --name quizapp -d -p 8099:80 quizapp:latest'
                 }
             }
         }
