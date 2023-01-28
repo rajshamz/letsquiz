@@ -18,7 +18,7 @@ pipeline {
                 script {
                     sh 'docker stop quizapp || true'
                     sh 'docker rm quizapp || true'
-                    sh 'docker run --name quizapp -d -p 8099:80 quizapp:latest'
+                    sh 'docker run --name quizapp -d -p 8099:8080 quizapp:latest'
                 }
             }
         }
